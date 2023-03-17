@@ -53,13 +53,12 @@ touch .git
 %{opt_qmake_qt5} \
   CONFIG+=lang-all
 
-# bug in sb2 leading to 000 permission in some generated files
-chmod -R ugo+r .
-
+# have to restart build several times due to bug in sb2
+%make_build || chmod -R ugo+r . || true
+%make_build || chmod -R ugo+r . || true
+%make_build || chmod -R ugo+r . || true
 %make_build
 
-# bug in sb2 leading to 000 permission in some generated files
-chmod -R ugo+r .
 
 
 %install
