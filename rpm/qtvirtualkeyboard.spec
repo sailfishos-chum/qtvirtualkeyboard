@@ -1,5 +1,7 @@
 %global qt_version 5.15.8
 
+%{?opt_qt5_default_filter}
+
 Summary: Qt5 - VirtualKeyboard component
 Name: opt-qt5-qtvirtualkeyboard
 Version: 5.15.8
@@ -16,6 +18,10 @@ BuildRequires: opt-qt5-qtbase-private-devel
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 BuildRequires: opt-qt5-qtdeclarative-devel >= %{qt_version}
 BuildRequires: opt-qt5-qtsvg-devel >= %{qt_version}
+
+Requires: opt-qt5-qtbase-gui >= %{qt_version}
+Requires: opt-qt5-qtdeclarative >= %{qt_version}
+Requires: opt-qt5-qtsvg >= %{qt_version}
 
 # version unknown
 Provides: bundled(libpinyin)
