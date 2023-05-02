@@ -1,10 +1,10 @@
-%global qt_version 5.15.8
+%global qt_version 5.15.9
 
 %{?opt_qt5_default_filter}
 
 Summary: Qt5 - VirtualKeyboard component
 Name: opt-qt5-qtvirtualkeyboard
-Version: 5.15.8
+Version: 5.15.9
 Release: 1%{?dist}
 
 # See LGPL_EXCEPTIONS.txt, LICENSE.GPL3, respectively, for exception details
